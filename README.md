@@ -1,7 +1,7 @@
 # Node-movie-RESTful_API-tutorial
 Node.js_Tutorial  - Movie API
 
-Movies
+# Movies
 
 | Route        | HTTP       | POST body     |    Description      |
 | :---         |     ---  |     :---      |        :---       |
@@ -14,7 +14,7 @@ Movies
 | /movies/between/:start/:end     | `GET`      | Empty         |Movies between two dates.  |
 
 
-Directors
+# Directors
 
 | Route        | HTTP       | POST body     |    Description     |
 | :---         |     ---    |     :---      |        :---        |
