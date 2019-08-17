@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
             $lookup: {
                 from: 'movies',
                 localField: '_id',
-                foreingField: 'director_id',
+                foreignField: 'director_id',
                 as: 'movies',
             }
         },
