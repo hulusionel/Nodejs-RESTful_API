@@ -7,4 +7,5 @@ mongoose.connection.on('open',()=>{
 mongoose.connection.on('error',(err)=>{
     console.log('MongoDB:Error',err);
 });
-}
+mongoose.Promise=global.Promise;
+};

@@ -11,5 +11,13 @@ const MovieSchema=new Schema({
     country:String,
     year:Number,
     imdb:Number,
+    createdAt:{
+        type:Date,
+        default:Date.now,
+    },
+    status:{
+        type:Boolean,
+        default:1
+    }
 });
 module.exports=mongoose.model('movie',MovieSchema);
