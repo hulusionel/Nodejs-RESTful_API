@@ -1,7 +1,7 @@
 # Node-movie-RESTful_API-tutorial
 Node.js_Tutorial  - Movie API
 
-#Movies
+# Movies
 
 | Route        | HTTP       | POST body     |    Description      |
 | :---         |     ---  |     :---      |        :---       |
@@ -14,11 +14,12 @@ Node.js_Tutorial  - Movie API
 | /movies/between/:start/:end     | `GET`      | Empty         |Movies between two dates.  |
 
 
-#Directors
+# Directors
+
 | Route        | HTTP       | POST body     |    Description     |
 | :---         |     ---    |     :---      |        :---        |
-| /director    | `GET`      | Empty         |List all directors. |
-| /director    | `POST`      | { name: 'foo', surname:'bar', bio:'lorem ipsum' }         |	Create a new director. |
+| /directors    | `GET`      | Empty         |List all directors. |
+| /directors    | `POST`      | { name: 'foo', surname:'bar', bio:'lorem ipsum' }         |	Create a new director. |
 | /directors/:director_id   | `GET`      | Empty         |Get a director. |
 | /directors/:director_id   | `PUT`      | {'name':'foo', 'surname':'bar', 'bio': 'lorem'}         |Update a director with new info. |
 | /directors/:director_id   | `DELETE`      | Empty         |Delete a director. |
