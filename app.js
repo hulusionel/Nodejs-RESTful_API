@@ -11,6 +11,12 @@ const director = require('./routes/director');
 const app = express();
 //db connection
 const db=require('./helper/db')();
+//config
+const config=require('./config');
+app.set('api_key',config.api_key);
+
+//middleware
+const verifyToken=require('./middleware/verifyToken');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,8 +29,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/movies', movie);
-app.use('/directors', director);
+app.use('/api',verifyToken);
+app.use('/api/movies', movie);
+app.use('/api/directors', director);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) =>{
